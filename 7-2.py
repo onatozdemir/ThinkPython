@@ -1,5 +1,5 @@
 ## Solution for Think Python Chpater 7, Exercise 2
-## Comperation of Ramanujan's Formula for pi/3 to Python's built in function
+## Comperation of Ramanujan's Formula for 1/pi to Python's built in function
 
 
 import math
