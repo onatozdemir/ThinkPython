@@ -3,23 +3,33 @@ fin = open('words.txt')
 line = fin.readline()
 
 
-def avoids():
-    word = line.strip()
-    c = str(input('please enter letters: '))
+def avoids(letters, word):
     b = word
-    count = 0
-    for line in fin:
-        for a in b:
-            num = 0
-            while num < len(c):
-                if a == c[num]:
-                    return False
-                num += 1
-        count += 1
-        return count
+    for a in b:
+        num = 0
+        while num < len(letters):
+            if a == letters[num]:
+                return False
+            num +=1
+    return True
 
-print(avoids())
+def list_of_avois():
+    count = 0
+    letters = str(input('please enter letters: '))
+    for line in fin:
+        word = line.strip()
+        if avoids(letters, word) == True:
+            count += 1
+        else:
+            count = count
+    return count
+
+print(list_of_avois())
+
+
+
         
+
 
 
 
